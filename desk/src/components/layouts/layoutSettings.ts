@@ -36,7 +36,7 @@ export const agentPortalSidebarOptions = [
     to: "AgentKnowledgeBase",
   },
   {
-    label: "Customers",
+    label: __("Operations"),
     icon: OrganizationsIcon,
     to: "CustomerList",
   },

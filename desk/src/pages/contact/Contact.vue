@@ -78,7 +78,7 @@
                 (contactInfoResource.data?.customers?.length ?? 0) > 1
                   ? {
                       key: 'customer',
-                      placeholder: __('Customer'),
+                      placeholder: __('Operation'),
                       doctype: 'HD Customer',
                       filters: {
                         name: ['in', contactInfoResource.data.customers.map((c: { name: string }) => c.name)],

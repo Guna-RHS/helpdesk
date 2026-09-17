@@ -21,17 +21,7 @@
           :isSidebarCollapsed="isCollapsed"
         />
       </div>
-      <SidebarItem
-        v-if="isOnboardingStepsCompleted && !isCustomerPortal"
-        :label="__('Help')"
-        :icon="HelpIcon"
-        :on-click="
-          () => {
-            showHelpModal = minimize ? true : !showHelpModal;
-            minimize = !showHelpModal;
-          }
-        "
-      />
+      <!-- Help sidebar entry intentionally removed (not needed for this deployment) -->
     </template>
   </AppSidebar>
 
@@ -147,7 +137,7 @@ const customerPortalDropdown = computed(() => [
 const agentPortalDropdown = computed(() => [
   appsMenuOption.value,
   {
-    label: __("Customer portal"),
+    label: __("Operation portal"),
     icon: "lucide-users",
     onClick: () => {
       const path = router.resolve({ name: "TicketsCustomer" });
@@ -390,7 +380,7 @@ const articles = ref([
       },
       {
         name: "customer-portal",
-        title: __("Customer Portal"),
+        title: __("Operation Portal"),
       },
     ],
   },
@@ -402,7 +392,7 @@ const articles = ref([
       { name: "agent", title: __("Agent") },
       { name: "team", title: __("Team") },
       { name: "contact", title: __("Contact") },
-      { name: "customer", title: __("Customer") },
+      { name: "customer", title: __("Operation") },
       { name: "knowledge-base", title: __("Knowledge Base") },
       { name: "saved-replies", title: __("Saved Replies") },
       { name: "service-level-agreement", title: __("Service Level Agreement") },

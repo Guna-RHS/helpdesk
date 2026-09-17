@@ -3,7 +3,7 @@
     <LayoutHeader>
       <template #left-header>
         <div class="text-lg-medium text-ink-gray-9">
-          {{ __("Customers") }}
+          {{ __("Operations") }}
         </div>
       </template>
       <template #right-header>
@@ -83,7 +83,7 @@ const options = computed(() => {
 
 usePageMeta(() => {
   return {
-    title: "Customers",
+    title: "Operations",
   };
 });
 </script>

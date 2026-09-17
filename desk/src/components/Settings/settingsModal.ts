@@ -108,7 +108,9 @@ export const tabs = computed(() => {
           label: __("SLA Policies"),
           icon: markRaw(ShieldCheck),
           component: markRaw(Sla),
-          condition: () => auth.isAdmin || auth.isManager,
+          // SLA keeps running (default SLA still applies to tickets); just
+          // not surfaced in Settings for this deployment.
+          condition: () => false,
         },
         {
           label: __("Business Holidays"),
@@ -147,7 +149,8 @@ export const tabs = computed(() => {
           label: __("ERPNext"),
           icon: markRaw(ERPNextSettingsIcon),
           component: markRaw(ERPNextIntegrationSettings),
-          condition: () => auth.isAdmin || auth.isManager,
+          // Not used in this deployment - kept in code, hidden from Settings.
+          condition: () => false,
         },
       ],
     },

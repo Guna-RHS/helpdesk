@@ -1,7 +1,7 @@
 <template>
   <Dialog
     v-model:open="model"
-    :title="__('Create Customer')"
+    :title="__('Create Operation')"
     size="lg"
     @after-leave="reset"
   >
@@ -11,7 +11,7 @@
           <ImageAvatar
             v-model="state.image"
             :label="__('Logo')"
-            :fallback-label="state.name || __('Customer')"
+            :fallback-label="state.name || __('Operation')"
             shape="square"
           />
 

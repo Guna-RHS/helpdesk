@@ -463,8 +463,8 @@ function getContactFieldConfig(newDoc: boolean = false): FieldConfigRow[] {
     {
       key: "customer",
       type: "Link",
-      label: __("Customer"),
-      placeholder: __("Select Customer"),
+      label: __("Operation"),
+      placeholder: __("Select Operation"),
       doctype: "HD Customer",
     },
   ];

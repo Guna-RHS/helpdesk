@@ -106,7 +106,7 @@ const agentPortalDropdown = computed(() => [
   appsMenuOption.value,
   ...(authStore.hasAgentRecord ? [availabilityMenuOption.value] : []),
   {
-    label: __("Customer portal"),
+    label: __("Operation portal"),
     icon: "lucide-users",
     onClick: () => {
       const path = router.resolve({ name: "TicketsCustomer" });

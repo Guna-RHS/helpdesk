@@ -117,7 +117,7 @@
               class="block text-base text-ink-gray-5"
               v-if="!contactInfoResource.data?.invitation"
             >
-              {{ __("Customer") }}
+              {{ __("Operation") }}
             </label>
 
             <!-- Already linked: read-only, opens the customer in a new tab -->
@@ -156,7 +156,7 @@
               v-if="canLinkCustomer"
               v-model="state.customer"
               doctype="HD Customer"
-              :placeholder="__('Select Customer')"
+              :placeholder="__('Select Operation')"
             />
           </div>
 

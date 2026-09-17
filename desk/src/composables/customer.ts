@@ -177,7 +177,7 @@ export const customerFields: FieldConfig[] = [
   {
     key: "customerType",
     type: "select",
-    label: __("Customer Type"),
+    label: __("Operation Type"),
     options: customerTypeOptions,
   },
   {

@@ -166,7 +166,7 @@ const dropdownOptions = computed(() => {
       icon: "briefcase",
       submenu: [
         {
-          label: __("Customer"),
+          label: __("Operation"),
           icon: props.contact.is_manager ? undefined : "check",
           onClick: () => {
             if (!props.contact.is_manager) return;
@@ -174,7 +174,7 @@ const dropdownOptions = computed(() => {
           },
         },
         {
-          label: __("Customer Manager"),
+          label: __("Operation Manager"),
           icon: props.contact.is_manager ? "check" : undefined,
           onClick: () => {
             if (props.contact.is_manager) return;

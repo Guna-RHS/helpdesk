@@ -197,7 +197,7 @@ const activeTab = computed<number>({
 
 const breadcrumbs = [
   {
-    label: __("Customers"),
+    label: __("Operations"),
     route: { name: "CustomerList" },
   },
   {
@@ -264,7 +264,7 @@ onMounted(() => {
 
 usePageMeta(() => {
   return {
-    title: `Customer: ${props.id}`,
+    title: `Operation: ${props.id}`,
   };
 });
 </script>

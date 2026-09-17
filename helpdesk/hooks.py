@@ -9,6 +9,8 @@ app_license = "AGPLv3"
 required_apps = ["telephony"]
 require_type_annotated_api_methods = True
 
+app_include_js = "/assets/helpdesk/js/hide_navbar_icons.js"
+
 add_to_apps_screen = [
     {
         "name": "helpdesk",

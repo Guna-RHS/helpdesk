@@ -127,7 +127,7 @@ interface InviteResult {
 }
 
 const roleOptions = [
-  { value: "HD Customer", label: __("Customer") },
+  { value: "HD Customer", label: __("Operation") },
   { value: "HD Customer Manager", label: __("Customer Manager") },
 ];
 

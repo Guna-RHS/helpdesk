@@ -66,7 +66,7 @@ const remainingCustomers = computed(() =>
 const label = computed(() =>
   props.customers.length === 1
     ? props.customers[0].name
-    : __("{0} Customers", [props.customers.length])
+    : __("{0} Operations", [props.customers.length])
 );
 
 function goToCustomer(name: string): void {

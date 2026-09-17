@@ -145,7 +145,8 @@ class HelpdeskDashboard:
     def get_number_card_data(self):
         return [
             self.get_ticket_count(),
-            self.get_sla_fulfilled_count(),
+            # % SLA Fulfilled card intentionally omitted here - SLA still
+            # applies to every ticket, just not surfaced on this dashboard.
             self.get_avg_first_response_time(),
             self.get_avg_resolution_time(),
             self.get_avg_feedback_score(),

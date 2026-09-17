@@ -27,7 +27,7 @@
           <ImageAvatar
             v-model="state.image"
             :label="__('Logo')"
-            :fallback-label="state.name || __('Customer')"
+            :fallback-label="state.name || __('Operation')"
             shape="square"
           />
 

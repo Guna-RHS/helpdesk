@@ -5,7 +5,7 @@
          per-element bottom padding. -->
     <div class="shrink-0 space-y-4 p-4">
       <TicketContact />
-      <TicketSLA />
+      <TicketSLA v-if="false" />
     </div>
 
     <!-- Scrollable sections: Key Info + Ticket Info + Recent / Similar Tickets -->

@@ -113,7 +113,7 @@
                     {{ __("SLA") }}
                   </h3>
                   <div class="px-6 py-3">
-                    <TicketSLA />
+                    <TicketSLA v-if="false" />
                   </div>
                 </template>
                 <div

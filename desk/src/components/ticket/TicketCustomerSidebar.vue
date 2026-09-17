@@ -50,39 +50,41 @@
         </span>
       </div>
 
-      <!-- sla info -->
-      <div
-        v-for="data in slaData"
-        :key="data.title"
-        class="flex items-center text-base"
-      >
-        <div class="w-[126px] text-ink-gray-5 text-sm">{{ data.title }}</div>
+      <!-- sla info: SLA still runs, just not shown in this deployment's UI -->
+      <template v-if="false">
         <div
-          class="break-words text-base text-ink-gray-8 flex items-center gap-2"
+          v-for="data in slaData"
+          :key="data.title"
+          class="flex items-center text-base"
         >
-          <Tooltip :text="dateFormat(data.value, dateTooltipFormat)">
-            <span class="truncate text-base" :class="data.textColor">
-              {{ __(data.label) }}
-            </span>
-          </Tooltip>
-          <!-- SLA explanation icon -->
-          <Tooltip
-            v-if="
-              dayjs(data.value).diff(dayjs(), 'day', true) > 4 &&
-              data.title === 'Resolution'
-            "
-            :text="
-              __(
-                'This date is calculated based on configured SLAs, working hours, and holidays.'
-              )
-            "
+          <div class="w-[126px] text-ink-gray-5 text-sm">{{ data.title }}</div>
+          <div
+            class="break-words text-base text-ink-gray-8 flex items-center gap-2"
           >
-            <lucide-circle-question-mark
-              class="h-4 w-4 text-ink-gray-6 cursor-pointer"
-            />
-          </Tooltip>
+            <Tooltip :text="dateFormat(data.value, dateTooltipFormat)">
+              <span class="truncate text-base" :class="data.textColor">
+                {{ __(data.label) }}
+              </span>
+            </Tooltip>
+            <!-- SLA explanation icon -->
+            <Tooltip
+              v-if="
+                dayjs(data.value).diff(dayjs(), 'day', true) > 4 &&
+                data.title === 'Resolution'
+              "
+              :text="
+                __(
+                  'This date is calculated based on configured SLAs, working hours, and holidays.'
+                )
+              "
+            >
+              <lucide-circle-question-mark
+                class="h-4 w-4 text-ink-gray-6 cursor-pointer"
+              />
+            </Tooltip>
+          </div>
         </div>
-      </div>
+      </template>
     </div>
     <!-- feedback component -->
     <TicketFeedback

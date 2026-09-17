@@ -205,12 +205,10 @@ const props = defineProps({
 
 const router = useRouter();
 const { views } = useView("HD Ticket");
-const currentTab = ref("upcoming_sla");
+const currentTab = ref("pending");
 const chartTabs = [
-  {
-    label: __("SLA"),
-    value: "upcoming_sla",
-  },
+  // SLA tab intentionally omitted - SLA still applies to tickets, just not
+  // surfaced as a dashboard tab in this deployment.
   {
     label: __("Pending"),
     value: "pending",
